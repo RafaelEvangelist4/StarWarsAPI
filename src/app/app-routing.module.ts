@@ -1,3 +1,4 @@
+import { FilmComponent } from './components/film/film.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PeopleComponent } from './components/people/people.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   
   { path: '', component: NavbarComponent },
   { path:'people', component: PeopleComponent },
-  { path: 'planet', component: PlanetComponent}
+  { path: 'planet', component: PlanetComponent},
+  { path: 'film', component: FilmComponent}
   
 ];
 
