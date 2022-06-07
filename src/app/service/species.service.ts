@@ -1,17 +1,15 @@
-import { Planet } from './../models/planet.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
+import { Specie } from '../models/specie.model';
 @Injectable({
   providedIn: 'root'
 })
-export class PlanetService {
+export class SpeciesService {
 
   constructor(private http: HttpClient) { }
 
-  getPlanet(page: number): Observable<any> {
-    return this.http.get<Planet>(`https://swapi.dev/api/planets/?page=${page}`);
+  getSpecies(page: number): Observable<any> {
+    return this.http.get<Specie>(`https://swapi.dev/api/species/?page=${page}`);
 }
-
 }

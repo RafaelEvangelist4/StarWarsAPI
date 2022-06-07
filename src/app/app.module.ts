@@ -19,6 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PeopleComponent } from './components/people/people.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { FilmComponent } from './components/film/film.component';
+import { SpeciesComponent } from './components/species/species.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FilmComponent } from './components/film/film.component';
     NavbarComponent,
     PeopleComponent,
     PlanetComponent,
-    FilmComponent
+    FilmComponent,
+    SpeciesComponent
   ],
   imports: [
     BrowserModule,
