@@ -9,7 +9,7 @@ import { Specie } from 'src/app/models/specie.model';
 })
 export class SpeciesComponent implements OnInit {
   species: Specie[] = [];
-  displayedColumns = ['name','classification', 'designation', 'average_height', 'skin_colors', 'hair_colors', 'eye_colors', 'average_lifespan', 'homeworld', 'language' ];
+  displayedColumns = ['name','classification', 'designation', 'average_height', 'skin_colors', 'hair_colors', 'eye_colors', 'average_lifespan', 'language' ];
   constructor(private speciesService: SpeciesService) { }
 
   ngOnInit(): void {

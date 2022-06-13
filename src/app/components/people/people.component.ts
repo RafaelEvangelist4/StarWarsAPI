@@ -1,6 +1,8 @@
 import { PeopleService } from './../../service/people.service';
 import { Component, OnInit } from '@angular/core';
 import { People } from 'src/app/models/people.model';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-people',
@@ -8,21 +10,21 @@ import { People } from 'src/app/models/people.model';
   styleUrls: ['./people.component.scss']
 })
 export class PeopleComponent implements OnInit {
-  people: People[] = [];
-  displayedColumns = ['name', 'height', 'mass', 'hair_color', 'skin_color','eye_color','birth_year','gender'];
-  
-  constructor(private peopleService: PeopleService) { }
+  displayedColumns = ['name', 'height', 'mass', 'hair_color', 'skin_color','eye_color','birth_year','gender', 'action'];
+  characterList!: Observable<People[]>;
+  constructor(private peopleService: PeopleService, private router: Router) { }
   
   ngOnInit(): void {
-    this.getPeople(1);
+    this.getAllCharacter();
     
   }
-  getPeople(page: number): void{
-    this.peopleService.getPeople(page)
-    .subscribe(peopleList => {
-      this.people = peopleList.results;
-      console.log(this.people);
-    });
+
+  getAllCharacter(){
+    this.characterList = this.peopleService.getAllCharacter();
+  } 
+  
+  characterDetail(id: number){
+    this.router.navigate(['/detail', id]);
   }
  }
 

@@ -8,6 +8,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +21,7 @@ import { PeopleComponent } from './components/people/people.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { FilmComponent } from './components/film/film.component';
 import { SpeciesComponent } from './components/species/species.component';
+import { DetailComponent } from './components/people/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { SpeciesComponent } from './components/species/species.component';
     PeopleComponent,
     PlanetComponent,
     FilmComponent,
-    SpeciesComponent
+    SpeciesComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { SpeciesComponent } from './components/species/species.component';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
