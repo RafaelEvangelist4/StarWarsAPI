@@ -3,15 +3,16 @@ import { People } from 'src/app/models/people.model';
 import { PeopleService } from './../../../service/people.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-
   id!: number;
   people!: People;
+  
   constructor(private route: ActivatedRoute,private router: Router,
     private peopleService: PeopleService) { }
 
@@ -23,6 +24,8 @@ export class DetailComponent implements OnInit {
       .subscribe(data => {
         this.people = data;
       }, error => console.log(error));
+    
+    
   }
 
   List(){

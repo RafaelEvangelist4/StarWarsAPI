@@ -1,41 +1,35 @@
 <div class="row">
     <div class="card col-6 p-1" *ngIf="people">
-    <div class="card">
-        <div class="card-header">
-            {{people.name}}
+        <div class="card">
+            <div class="card-header">
+                {{people.name}}
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-12">
+                        <h1>Filmes em que esse personagem aparece</h1>
+                        {{people.films}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <h1>Especie do personagem</h1>
+                        {{people.species}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <h1>Veiculos que esse personagem pilotou</h1>
+                        {{people.vehicles}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <h1>Naves que esse personagem pilotou</h1>
+                        {{people.starships}}
+                    </div>
+                </div>
+            </div>
+            <button (click)="List()" class="btn btn-primary">Voltar</button>
         </div>
-        <div class="card-body">
-            <div class="form-group row">
-                <div class="col-12">
-                    {{people.birth_year}}
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-12">
-                    {{people.gender}}
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-12">
-                    {{people.skin_color}}
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-12">
-                    {{people.hair_color}}
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-12">
-                    {{people.height}}
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-12">
-                    {{people.mass}}
-                </div>
-            </div>
-            <button (click)="List()" class="btn btn-primary">Back to List</button>
-            </div>
-    </div>
-    </div>
+        

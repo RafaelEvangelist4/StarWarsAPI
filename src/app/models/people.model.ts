@@ -9,6 +9,10 @@ export interface People{
     birth_year: number;
     gender: string;
     homeworld: string;
+    films: string[];
+    species: string[];
+    vehicles: string[];
+    starships: string[];
     created: string;
     edited: string;
     url: string;
@@ -25,6 +29,10 @@ export class PeopleClass implements People{
     birth_year: number = 0;
     gender: string = "";
     homeworld: string = "";
+    films: string[] = [];
+    species: string[]= [];
+    vehicles: string[] = [];
+    starships: string[] = [];
     created: string = "";
     edited: string = "";
     url: string = "";
