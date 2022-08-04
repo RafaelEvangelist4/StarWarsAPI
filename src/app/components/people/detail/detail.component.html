@@ -14,22 +14,21 @@
                 <div class="form-group row">
                     <div class="col-12">
                         <h1>Especie do personagem</h1>
-                        {{people.species}}
+                        {{people.species ? people.species: 'Não faz parte de nehuma especie conhecida'}}
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-12">
                         <h1>Veiculos que esse personagem pilotou</h1>
-                        {{people.vehicles}}
+                        {{people.vehicles ? people.vehicles : 'Não pilota nenhum veiculo'}}
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-12">
                         <h1>Naves que esse personagem pilotou</h1>
-                        {{people.starships}}
+                        {{people.starships ? people.starships  : 'Não pilota nenhuma nave'}}
                     </div>
                 </div>
             </div>
             <button (click)="List()" class="btn btn-primary">Voltar</button>
         </div>
-        
